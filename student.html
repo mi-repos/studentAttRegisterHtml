@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance Register</title>
+    <link rel="stylesheet" href="css/student.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Student Attendance Register</h1>
+
+    <!-- Attendance Form -->
+    <form id="attendanceForm">
+        <label for="studentID">Student ID:</label>
+        <input type="text" id="studentID" required><br>
+        <label for="studentName">Student Name:</label>
+        <input type="text" id="studentName" required><br>
+        <label for="courseName">Course/Class Name:</label>
+        <input type="text" id="courseName" required><br>
+        <label for="date">Date:</label>
+        <input type="date" id="date" required><br>
+        <label for="attendanceStatus">Attendance Status:</label>
+        <select id="attendanceStatus" required>
+            <option value="Present">Present</option>
+            <option value="Absent">Absent</option>
+            <option value="Late">Late</option>
+            <option value="Excused">Excused</option>
+        </select><br>
+        <label for="reason">Reason for Absence (if any):</label>
+        <input type="text" id="reason"><br>
+        <label for="timeIn">Time In:</label>
+        <input type="time" id="timeIn"><br>
+        <label for="timeOut">Time Out:</label>
+        <input type="time" id="timeOut"><br><br>
+        <button type="button" class="btn" onclick="addAttendance()">Add Attendance</button>
+    </form>
+
+    <!-- Attendance Table -->
+    <table id="attendanceTable">
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Student Name</th>
+                <th>Course Name</th>
+                <th>Date</th>
+                <th>Attendance Status</th>
+                <th>Reason</th>
+                <th>Time In</th>
+                <th>Time Out</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <!-- Attendance Summary -->
+    <div class="attendance-summary">
+        <h2>Attendance Summary</h2>
+        <p id="attendancePercentage">Attendance Percentage: 0%</p>
+    </div>
+</div>
+
+<script src="js/student.js"></script>
+
+</body>
+</html>
